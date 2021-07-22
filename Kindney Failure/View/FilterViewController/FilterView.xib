@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController" customModule="Kindney_Failure" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="WJf-C7-g1E"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sei-xL-eJ8">
+                    <rect key="frame" x="0.0" y="44" width="414" height="456"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksp-Da-2sF">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-RF-Dti">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPZ-Jj-6si">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wum-AU-kpr">
+                                                    <rect key="frame" x="16" y="16" width="382" height="168"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4PO-qp-3Qu">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                            <constraints>
+                                                <constraint firstItem="wum-AU-kpr" firstAttribute="leading" secondItem="uPZ-Jj-6si" secondAttribute="leading" constant="16" id="3cP-4I-YNa"/>
+                                                <constraint firstAttribute="height" constant="200" id="g8Y-U6-a5U"/>
+                                                <constraint firstItem="wum-AU-kpr" firstAttribute="top" secondItem="uPZ-Jj-6si" secondAttribute="top" constant="16" id="nHL-8V-QYf"/>
+                                                <constraint firstAttribute="bottom" secondItem="wum-AU-kpr" secondAttribute="bottom" constant="16" id="op5-KD-Tf4"/>
+                                                <constraint firstAttribute="trailing" secondItem="wum-AU-kpr" secondAttribute="trailing" constant="16" id="wbc-gD-Pnc"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12X-Ux-fvr">
+                                            <rect key="frame" x="0.0" y="200" width="414" height="200"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="VWV-75-AHu"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="bzy-RF-Dti" secondAttribute="bottom" id="4OQ-Yy-w72"/>
+                                <constraint firstItem="bzy-RF-Dti" firstAttribute="leading" secondItem="Ksp-Da-2sF" secondAttribute="leading" id="Ln3-IS-HAa"/>
+                                <constraint firstItem="bzy-RF-Dti" firstAttribute="top" secondItem="Ksp-Da-2sF" secondAttribute="top" id="mXQ-aC-ROa"/>
+                                <constraint firstAttribute="trailing" secondItem="bzy-RF-Dti" secondAttribute="trailing" id="rFT-9y-FuM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Ksp-Da-2sF" firstAttribute="top" secondItem="sei-xL-eJ8" secondAttribute="top" id="DPF-YJ-liR"/>
+                        <constraint firstAttribute="trailing" secondItem="Ksp-Da-2sF" secondAttribute="trailing" id="Leq-XZ-7DS"/>
+                        <constraint firstAttribute="bottom" secondItem="Ksp-Da-2sF" secondAttribute="bottom" id="ebx-hl-0Uv"/>
+                        <constraint firstItem="Ksp-Da-2sF" firstAttribute="width" secondItem="sei-xL-eJ8" secondAttribute="width" id="hvI-QU-DZj"/>
+                        <constraint firstItem="Ksp-Da-2sF" firstAttribute="leading" secondItem="sei-xL-eJ8" secondAttribute="leading" id="lKR-ag-jfX"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Ybb-gC-gpb"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="es4-7C-35b"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sei-xL-eJ8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="6Wr-Hg-gfD"/>
+                <constraint firstItem="sei-xL-eJ8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IJw-bv-lY7"/>
+                <constraint firstItem="sei-xL-eJ8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Q2u-BD-ZHg"/>
+                <constraint firstItem="sei-xL-eJ8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xOt-28-1ea"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.23188405797103" y="200.22321428571428"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFB-qe-0FO">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+            <color key="backgroundColor" red="0.2118270099" green="0.27901098130000002" blue="0.22352460029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="45" id="TaY-Sf-Mtz"/>
+            </constraints>
+            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+            <state key="normal" title="Button">
+                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            </state>
+            <point key="canvasLocation" x="51" y="-105"/>
+        </button>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
